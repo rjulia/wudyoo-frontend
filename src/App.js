@@ -1,8 +1,12 @@
 
 import React, {useState, useEffect} from 'react'
-import { Button } from './components'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import { getRestaurants } from './context'
-
+import { Home, Privacity } from './pages'
 function App() {
   const [restaurants, setRestaurants] = useState([])
   useEffect(() => {
@@ -18,9 +22,16 @@ function App() {
 
   console.log(restaurants)
   return (
-    <div className="App">
-      <Button>I am a button with green background</Button>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/privacity">
+          <Privacity />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
