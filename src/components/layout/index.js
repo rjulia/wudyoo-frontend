@@ -2,29 +2,16 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import typography from '../../theme/typography'
-import {
-  Link
-} from "react-router-dom";
+import Nav from "../nav";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <div>
-      <Helmet>
-        <TypographyStyle typography={typography} />
-        <GoogleFont typography={typography} />
-      </Helmet>
-     <div>
-     <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/privacity">Privacity</Link>
-            </li>
-          </ul>
-        </nav>
-     </div>
+      <GoogleFont typography={typography} />
+      <TypographyStyle typography={typography} />
+      <div>
+        {/* <Nav /> */}
+      </div>
       {children}
       <p>Footer</p>
     </div>

@@ -1,9 +1,9 @@
 import React from 'react'
-import PrivacityView from './privacity-view'
+import PagesView from './pages-view'
 
 const PrivacityController = () => {
   return (
-      <PrivacityView/>
+      <PagesView/>
   )
 }
 

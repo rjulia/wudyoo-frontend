@@ -1,8 +1,8 @@
 import React from 'react'
 import { Layout } from '../../components'
-import useStyles from './privacity-style'
+import useStyles from './pages-style'
 
-const PrivacityView = () => {
+const PagesView = () => {
   const styles = useStyles()
   return (
     <Layout>
@@ -13,4 +13,4 @@ const PrivacityView = () => {
   )
 }
 
-export default PrivacityView
+export default PagesView
