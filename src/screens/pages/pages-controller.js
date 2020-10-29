@@ -1,10 +1,10 @@
 import React from 'react'
 import PagesView from './pages-view'
 
-const PrivacityController = () => {
+const PagesController = () => {
   return (
       <PagesView/>
   )
 }
 
-export default PrivacityController
+export default PagesController

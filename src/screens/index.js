@@ -1,7 +1,7 @@
 import Home from './home'
-import Privacity from './privacity'
+import Pages from './pages'
 
 export {
   Home,
-  Privacity
+  Pages
 }

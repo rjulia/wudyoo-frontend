@@ -1,3 +1,3 @@
-import PrivacityController from './privacity-controller'
+import PagesController from './pages-controller'
 
-export default PrivacityController
+export default PagesController
