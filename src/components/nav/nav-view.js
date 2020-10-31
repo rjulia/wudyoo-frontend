@@ -12,7 +12,7 @@ const NavView = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/pages">Link 1</Link>
+          <Link to="/pages/terms-and-conditions">Terms & conditions</Link>
         </li>
       </ul>
     </nav>
