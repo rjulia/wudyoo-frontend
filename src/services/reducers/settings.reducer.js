@@ -25,7 +25,7 @@ export default function SettingsReducer(state = InitialLanguageState, action) {
     default:
       const language = localStorage.getItem('language') || localization.getLanguage();
       const supportedLanguage = () => {
-        if ((language === 'en') || (language === 'zhhk') || (language === 'zhch')) {
+        if ((language === 'en') || (language === 'zh') || (language === 'hk')) {
           return language;
         }
         return 'en';

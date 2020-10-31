@@ -1,11 +1,11 @@
 import LocalizedStrings from 'localized-strings';
 import en from './en/'
 import hk from './hk'
-import ch from './ch'
+import zh from './zh'
 
 
 let localization = new LocalizedStrings({
-  ch,
+  zh,
   en,
   hk
 });

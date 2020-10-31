@@ -1,24 +1,36 @@
-import React, { useMemo } from 'react'
+import _ from 'lodash'
+import React from 'react'
+import { connect } from 'react-redux';
 import { useLocation } from "react-router-dom";
+import { useQuery } from '@apollo/react-hooks';
+import { GET_PAGE } from '../../services/queries'
+import {Spinner} from '../../components'
 import PagesView from './pages-view'
-import URI from 'urijs'
-import { isBrowser } from '../../helpers'
 
-const PagesController = ({settings}) => {
-  console.log(settings)
+
+const PagesController = ({ settings }) => {
   let location = useLocation();
-  const urlParams = useMemo(() => {
-    let search = {}
-    if (isBrowser()) {
-      search = URI(location.pathname).search(true)
+  const slug = _.last(_.split(location.pathname, '/'))
+  const { data, loading, error } = useQuery(GET_PAGE, {
+    variables: {
+      slug
     }
-    return search
-  }, [location])
+  });
+  if (loading) return <Spinner />;
+  if (error) return <p>ERROR</p>;
 
-  console.log(urlParams)
+  const viewProps = {
+    settings,
+    data
+  }
   return (
-      <PagesView/>
+    <PagesView {...viewProps} />
   )
 }
 
-export default PagesController
+const mapStateToProps = (state) => {
+  return state
+}
+
+
+export default connect(mapStateToProps)(PagesController); 

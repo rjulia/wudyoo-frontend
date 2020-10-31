@@ -1,4 +1,4 @@
-const zhhk = {
+const hk = {
   home: {
     services: {
       title: 'Hong Kong',
@@ -6,4 +6,4 @@ const zhhk = {
   },
 }
 
-export default zhhk;
+export default hk;

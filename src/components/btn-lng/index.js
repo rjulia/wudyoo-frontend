@@ -18,7 +18,7 @@ const BtnLng = (props) => {
       <ul>
         <li className={(isActiveHandle('en')) ? 'active' : ''} onClick={() => onLanguageButtonPress('en')}>EN</li>
         <li >|</li>
-        <li className={(isActiveHandle('ch')) ? 'active' : ''} onClick={() => onLanguageButtonPress('ch')}>CH</li>
+        <li className={(isActiveHandle('ch')) ? 'active' : ''} onClick={() => onLanguageButtonPress('zh')}>CH</li>
         <li >|</li>
         <li className={(isActiveHandle('hk')) ? 'active' : ''} onClick={() => onLanguageButtonPress('hk')}>HK</li>
       </ul>
