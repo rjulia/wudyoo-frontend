@@ -24,6 +24,7 @@
     "react-typography": "^0.16.19",
     "typeface-lato": "^1.1.13",
     "typography": "^0.16.19",
+    "urijs": "^1.19.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

@@ -1,7 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import typography from '../../theme/typography'
+import Footer from "../footer";
 import Nav from "../nav";
 
 const Layout = ({ children }) => {
@@ -10,10 +10,10 @@ const Layout = ({ children }) => {
       <GoogleFont typography={typography} />
       <TypographyStyle typography={typography} />
       <div>
-        {/* <Nav /> */}
+        <Nav />
       </div>
       {children}
-      <p>Footer</p>
+      <Footer />
     </div>
   )
 }
