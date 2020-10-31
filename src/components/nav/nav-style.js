@@ -3,7 +3,9 @@ import {createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles((theme)=>({
   container : {
-    backgroundColor: "#ccc"
+    maxWidth: 1240,
+    display: 'flex'
+    
   },
 }))
 

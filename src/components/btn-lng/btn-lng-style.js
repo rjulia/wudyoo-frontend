@@ -3,8 +3,6 @@ import {createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
   languageContianer: {
-    position: 'absolute',
-    zIndex: 100,
     width: '100%',
     display: 'flex',
     justifyContent: 'flex-end',
