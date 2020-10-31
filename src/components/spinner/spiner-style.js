@@ -2,7 +2,6 @@ import { createUseStyles } from 'react-jss'
 import Color from 'color'
 
 const useStyles = createUseStyles((theme) => {
-  console.log(theme)
   return {
   spinnerContainer: {
     backgroundColor: Color('#fff').alpha(0.1),

@@ -1,13 +1,16 @@
 
 import React from 'react'
+import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom"
 import { Home, Pages } from '../screens'
-function App() {
 
+function AppRouter({settings}) {
+  let { language } = settings;
+  console.log(language)
   return (
     <Router>
       <Switch>
@@ -21,5 +24,8 @@ function App() {
     </Router>
   );
 }
+const mapStateToProps = (state) => {
+  return state
+}
 
-export default App;
+export default connect(mapStateToProps)(AppRouter);

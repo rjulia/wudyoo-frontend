@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ThemeProvider} from 'react-jss'
+import { ThemeProvider } from 'react-jss'
 import ApolloClient from "apollo-client";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { HttpLink } from 'apollo-link-http';
 import { ApolloProvider } from '@apollo/react-hooks';
+import { Provider } from 'react-redux';
 import theme from './theme'
 import App from './router/AppRouter';
 import reportWebVitals from './reportWebVitals';
+import store from './store';
 
 let linkApi;
 if (process.env.NODE_ENV === 'production') {
@@ -31,13 +33,15 @@ export const client = new ApolloClient({
     console.log("networkgraphql", networkError);
   }
 });
-
+console.log(store)
 
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </ThemeProvider>
     </ApolloProvider>
   </React.StrictMode>,

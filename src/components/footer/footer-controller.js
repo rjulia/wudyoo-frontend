@@ -6,7 +6,6 @@ import Spinner from '../spinner'
 
 const FooterController = () => {
   const { data, loading, error } = useQuery(GET_PAGES);
-  console.log(data)
   if (loading) return <Spinner />;
   if (error) return <p>ERROR</p>;
   return (
