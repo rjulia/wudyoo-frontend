@@ -33,7 +33,7 @@ export const client = new ApolloClient({
     console.log("networkgraphql", networkError);
   }
 });
-console.log(store)
+console.log(theme)
 
 ReactDOM.render(
   <React.StrictMode>
